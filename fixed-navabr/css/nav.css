@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tab-head{
+    width: 100vw;
+    height: 50px;
+    line-height: 50px;
+    list-style-type: none;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-flex-wrap:nowrap;
+    -ms-flex-wrap:nowrap;
+    flex-wrap:nowrap;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    background:rgb(78, 70, 72);
+    overflow:auto;
+}
+
+.tab-head-item{
+    min-width: 68px;
+    text-align: center;
+    -webkit-box-flex:1;
+    -webkit-flex:1 0 auto;
+    -ms-flex:1 0 auto;
+    flex:1 auto;
+    color:white;
+    /* padding:0 5px; */
+}
+
+.li-active{
+    background: rgb(189, 180, 182);
+    color: black;
+}
