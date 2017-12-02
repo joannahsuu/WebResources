@@ -1,0 +1,138 @@
+body{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    overflow-y: scroll;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    color: #777;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 最外層 div */
+.content{
+    padding: 15px;
+    overflow: hidden;
+    background-color: #e7e7e7;
+    background-color: rgba(0,0,0,0.06);
+}
+
+p {
+    margin: 0;
+    padding: 10px 0;
+    color: #777;
+}
+
+.clear {
+    clear:both;
+}
+
+/* 每一個loading 的 div */
+.load-wrap {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #d8d8d8; 
+}
+
+.load-wrap p {
+    padding:  0 0 20px;
+    text-transform: uppercase;
+}
+
+.load-wrap:last-child{
+    margin-right: 0;
+}
+
+/* loading #1 */
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #4b9cdb; 
+}
+
+/* 動畫 */
+.load-1 .line:nth-last-child(1){
+    animation: loadingA 1.5s 1s infinite;
+}
+.load-1 .line:nth-last-child(2){
+    animation: loadingA 1.5s 0.5s infinite;
+}
+.load-1 .line:nth-last-child(3){
+    animation: loadingA 1.5s 0s infinite;
+}
+
+/* loading 3 */
+.load-3 .line:nth-last-child(1){
+    animation: loadingC .6s 1s linear infinite;
+}
+.load-3 .line:nth-last-child(2){
+    animation: loadingC .6s 2s linear infinite;
+}
+.load-3 .line:nth-last-child(3){
+    animation: loadingC .6s 3s linear infinite;
+}
+
+/* loading 9 */
+.spinner{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+}
+.bubble-1,
+.bubble-2{
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #4b9cdb;
+}
+
+.bubble-2{
+    top: auto;
+    bottom: 0;
+}
+
+.load-9 .spinner {
+    animation: loadingI 2s linear infinite;
+}
+
+.load-9 .bubble-1, .load-9 .bubble-2{
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.load-9 .bubble-2{
+    animation-delay: -1.0s;
+}
+
+@keyframes loadingA { 
+    0% {height: 15px;}
+    50% {height: 35px;}
+    100% {height: 15px;}
+}
+
+@keyframes loadingC {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(0,15px);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes loadingI {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes bounce {
+    0%, 100%{transform: scale(0.0);}
+    50% {transform: scale(1.0);}
+}
